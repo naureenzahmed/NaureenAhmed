@@ -109,8 +109,10 @@ body {
 }
 
 .folder img {
-  width: 100%;
-  height: auto;
+  height: clamp(4.5rem, 6vw, 6rem);
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
   filter: drop-shadow(0 6px 8px rgba(0,0,0,0.18));
   transition: transform 0.18s ease;
 }
