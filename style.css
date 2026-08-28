@@ -24,7 +24,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  background-image: url('assets/bg-hero.svg');
+  background-image: url('assets/bg-hero.jpg');
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
