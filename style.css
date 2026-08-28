@@ -160,7 +160,7 @@ body {
   display: flex;
   flex-direction: column;
   width: min(95vw, 46rem);
-  max-height: min(80vh, 34rem);
+  height: min(80vh, 34rem);
   background: #fff;
   border: 1px solid #ebebed;
   border-radius: 0.65rem;
