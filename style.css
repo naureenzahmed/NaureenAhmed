@@ -157,7 +157,7 @@ body {
 
 .note-window {
   position: relative;
-  width: min(96vw, 53.5rem);
+  width: min(95vw, 46rem);
   animation: noteIn 0.2s cubic-bezier(.2,.9,.3,1);
 }
 
@@ -170,10 +170,10 @@ body {
 
 .note-body {
   position: absolute;
-  left: 11.9%;
-  right: 11.9%;
-  top: 15.85%;
-  bottom: 17.9%;
+  left: 1.5%;
+  right: 1.5%;
+  top: 9.5%;
+  bottom: 3%;
   overflow-y: auto;
   padding: clamp(0.75rem, 2vw, 1.75rem) clamp(1.25rem, 3.4vw, 2.5rem);
   box-sizing: border-box;
@@ -183,10 +183,10 @@ body {
 
 .note-close {
   position: absolute;
-  left: 13.6%;
-  top: 11.6%;
-  width: 4%;
-  height: 4%;
+  left: 2.1%;
+  top: 1.8%;
+  width: 3.56%;
+  height: 4.11%;
   padding: 0;
   border: none;
   border-radius: 50%;
