@@ -371,6 +371,59 @@ body {
   margin: 0 0 0.35em;
 }
 
+.note-contact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.note-contact li {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 0.25rem 0.9rem;
+  align-items: baseline;
+}
+
+.note-contact-label {
+  font-weight: 700;
+  font-size: clamp(0.7rem, 1.2vw, 0.8rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b7a63;
+}
+
+.note-contact-values {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.15rem;
+}
+
+.note-contact-values a {
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.9vw, 1.15rem);
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.note-contact-note {
+  font-weight: 500;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  color: #6b7a63;
+}
+
+.note-contact-note:not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+
+@media (max-width: 560px) {
+  .note-contact li { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 860px) {
   .hero-content {
     grid-template-columns: 1fr;
