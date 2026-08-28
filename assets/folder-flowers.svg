@@ -1,0 +1,38 @@
+<svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="body"><rect x="8" y="42" width="104" height="50" rx="9"/></clipPath>
+  </defs>
+  <ellipse cx="62" cy="94" rx="46" ry="5" fill="#000" opacity="0.14"/>
+  <path d="M10,34 h26 q7,0 10,6 l3,5 h48 q10,0 10,10 v3 H10 Z" fill="#f4e6bd"/>
+  <rect x="8" y="42" width="104" height="50" rx="9" fill="#f7ecc9"/>
+  <g clip-path="url(#body)">
+    <g transform="translate(28,66)">
+      <circle r="3" fill="#e0561f"/>
+      <circle cx="-7" cy="-3" r="5" fill="#f2b23a"/>
+      <circle cx="7" cy="-3" r="5" fill="#4a7fd1"/>
+      <circle cx="-7" cy="6" r="5" fill="#4a7fd1"/>
+      <circle cx="7" cy="6" r="5" fill="#f2b23a"/>
+    </g>
+    <g transform="translate(58,58) scale(0.85)">
+      <circle r="3" fill="#c23b2e"/>
+      <circle cx="-7" cy="-3" r="5" fill="#e0561f"/>
+      <circle cx="7" cy="-3" r="5" fill="#f6cf4a"/>
+      <circle cx="-7" cy="6" r="5" fill="#f6cf4a"/>
+      <circle cx="7" cy="6" r="5" fill="#e0561f"/>
+    </g>
+    <g transform="translate(88,72) scale(0.9)">
+      <circle r="3" fill="#245a34"/>
+      <circle cx="-7" cy="-3" r="5" fill="#4a7fd1"/>
+      <circle cx="7" cy="-3" r="5" fill="#e0561f"/>
+      <circle cx="-7" cy="6" r="5" fill="#e0561f"/>
+      <circle cx="7" cy="6" r="5" fill="#4a7fd1"/>
+    </g>
+    <g transform="translate(94,52) scale(0.6)">
+      <circle r="3" fill="#c23b2e"/>
+      <circle cx="-7" cy="-3" r="5" fill="#f6cf4a"/>
+      <circle cx="7" cy="-3" r="5" fill="#f6cf4a"/>
+      <circle cx="-7" cy="6" r="5" fill="#4a7fd1"/>
+      <circle cx="7" cy="6" r="5" fill="#4a7fd1"/>
+    </g>
+  </g>
+</svg>

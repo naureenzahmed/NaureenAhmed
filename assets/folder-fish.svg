@@ -1,0 +1,36 @@
+<svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="body4"><rect x="20" y="30" width="80" height="46" rx="6"/></clipPath>
+    <pattern id="stripes" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
+      <rect width="16" height="16" fill="#79a893"/>
+      <rect y="0" width="16" height="8" fill="#a9cdbb"/>
+    </pattern>
+  </defs>
+  <rect x="4" y="4" width="112" height="92" rx="4" fill="#ffffff"/>
+  <path d="M22,20 h18 q5,0 7,4 l2,4 h34 q7,0 7,7 v2 H22 Z" fill="#e77fa8"/>
+  <rect x="20" y="30" width="80" height="46" rx="6" fill="url(#stripes)"/>
+  <g clip-path="url(#body4)">
+    <g fill="#e0492f">
+      <g transform="translate(34,53)">
+        <ellipse rx="10" ry="5"/>
+        <path d="M-9,0 L-16,-6 L-16,6 Z"/>
+        <circle cx="4" cy="-1.5" r="1" fill="#fff"/>
+      </g>
+      <g transform="translate(54,53)" fill="#f4bfd0">
+        <ellipse rx="10" ry="5"/>
+        <path d="M-9,0 L-16,-6 L-16,6 Z"/>
+        <circle cx="4" cy="-1.5" r="1" fill="#a83a55"/>
+      </g>
+      <g transform="translate(74,53)">
+        <ellipse rx="10" ry="5"/>
+        <path d="M-9,0 L-16,-6 L-16,6 Z"/>
+        <circle cx="4" cy="-1.5" r="1" fill="#fff"/>
+      </g>
+      <g transform="translate(94,53)" fill="#f4bfd0">
+        <ellipse rx="10" ry="5"/>
+        <path d="M-9,0 L-16,-6 L-16,6 Z"/>
+        <circle cx="4" cy="-1.5" r="1" fill="#a83a55"/>
+      </g>
+    </g>
+  </g>
+</svg>
