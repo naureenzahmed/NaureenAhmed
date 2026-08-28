@@ -156,8 +156,8 @@ body {
 }
 
 .note-overlay img {
-  max-width: min(90vw, 32rem);
-  max-height: 80vh;
+  max-width: min(95vw, 41.6rem);
+  max-height: 90vh;
   filter: drop-shadow(0 20px 40px rgba(0,0,0,0.35));
   animation: noteIn 0.2s cubic-bezier(.2,.9,.3,1);
 }
