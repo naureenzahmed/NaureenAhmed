@@ -56,8 +56,34 @@
 
     <div class="note-overlay" data-note-overlay>
       <div class="note-window" role="dialog" aria-modal="true" aria-label="Folder contents">
-        <img src="assets/popup-window.png" alt="" class="note-frame">
-        <button class="note-close" type="button" data-note-close aria-label="Close"></button>
+        <div class="note-chrome">
+          <div class="note-lights">
+            <button class="note-close" type="button" data-note-close aria-label="Close"></button>
+            <span class="note-light note-light-amber"></span>
+            <span class="note-light note-light-green"></span>
+          </div>
+          <span class="note-reload" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+              <path d="M11 5.2A4 4 0 1 0 12 8"></path>
+            </svg>
+          </span>
+          <div class="note-search" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+              <circle cx="7" cy="7" r="4.2"></circle><path d="M10.2 10.2 14 14"></path>
+            </svg>
+          </div>
+          <div class="note-tools" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M8 3v10M3 8h10"></path>
+            </svg>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2.6" y="3.4" width="10.8" height="9.2" rx="2.4"></rect><circle cx="8" cy="8" r="2.4"></circle>
+            </svg>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M3 5h10M3 8h10M3 11h10"></path>
+            </svg>
+          </div>
+        </div>
         <div class="note-body" data-note-body></div>
       </div>
     </div>
