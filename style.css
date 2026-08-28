@@ -378,6 +378,18 @@ body {
   border-radius: 0.3rem;
 }
 
+.note-cities {
+  list-style: none;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: 0.45rem 1.2rem;
+  font-weight: 700;
+  font-size: clamp(0.85rem, 1.6vw, 1rem);
+  color: var(--ink);
+}
+
 .note-contact {
   list-style: none;
   margin: 0;
