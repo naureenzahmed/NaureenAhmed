@@ -24,35 +24,50 @@
     <button class="next-btn" type="button" aria-label="Scroll to more">&raquo;</button>
 
     <nav class="folders" aria-label="Sections">
-      <a class="folder" href="#when-i-got-paid">
+      <button class="folder" type="button" data-open-note>
         <img src="assets/folder-cherries.png" alt="" width="120" height="100">
         <span class="folder-label">When I Got Paid</span>
-      </a>
-      <a class="folder" href="#working-for-fun">
+      </button>
+      <button class="folder" type="button" data-open-note>
         <img src="assets/folder-working-for-fun.png" alt="" width="120" height="100">
         <span class="folder-label">Working for Fun</span>
-      </a>
-      <a class="folder" href="#little-essays">
+      </button>
+      <button class="folder" type="button" data-open-note>
         <img src="assets/folder-lollipops.png" alt="" width="120" height="100">
         <span class="folder-label">Little Essays</span>
-      </a>
-      <a class="folder" href="#companies-i-like">
+      </button>
+      <button class="folder" type="button" data-open-note>
         <img src="assets/folder-companies-i-like.png" alt="" width="120" height="100">
         <span class="folder-label">Companies I Like</span>
-      </a>
-      <a class="folder" href="#resources">
+      </button>
+      <button class="folder" type="button" data-open-note>
         <img src="assets/folder-resources.png" alt="" width="120" height="100">
         <span class="folder-label">Resources</span>
-      </a>
-      <a class="folder" href="#i-love-food">
+      </button>
+      <button class="folder" type="button" data-open-note>
         <img src="assets/folder-i-love-food.png" alt="" width="120" height="100">
         <span class="folder-label">I Love Food</span>
-      </a>
-      <a class="folder" href="#reach-me">
+      </button>
+      <button class="folder" type="button" data-open-note>
         <img src="assets/folder-swimmers-reach-me.png" alt="" width="120" height="100">
         <span class="folder-label">Reach Me</span>
-      </a>
+      </button>
     </nav>
+
+    <div class="note-overlay" data-note-overlay>
+      <img src="assets/popup-note.png" alt="">
+    </div>
   </main>
+
+  <script>
+    const overlay = document.querySelector('[data-note-overlay]');
+    document.querySelectorAll('[data-open-note]').forEach((btn) => {
+      btn.addEventListener('click', () => overlay.classList.add('is-open'));
+    });
+    overlay.addEventListener('click', () => overlay.classList.remove('is-open'));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') overlay.classList.remove('is-open');
+    });
+  </script>
 </body>
 </html>
