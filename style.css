@@ -157,7 +157,7 @@ body {
 
 .note-window {
   position: relative;
-  width: min(95vw, 41.6rem);
+  width: min(96vw, 53.5rem);
   animation: noteIn 0.2s cubic-bezier(.2,.9,.3,1);
 }
 
@@ -170,15 +170,33 @@ body {
 
 .note-body {
   position: absolute;
-  left: 1%;
-  right: 1%;
-  top: 6%;
-  bottom: 10%;
+  left: 11.9%;
+  right: 11.9%;
+  top: 15.85%;
+  bottom: 17.9%;
   overflow-y: auto;
   padding: clamp(0.75rem, 2vw, 1.75rem) clamp(1.25rem, 3.4vw, 2.5rem);
   box-sizing: border-box;
   font-family: 'Pixelify Sans', sans-serif;
   color: var(--ink);
+}
+
+.note-close {
+  position: absolute;
+  left: 13.6%;
+  top: 11.6%;
+  width: 4%;
+  height: 4%;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+}
+
+.note-close:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
 }
 
 @keyframes noteIn {
