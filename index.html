@@ -24,47 +24,117 @@
     <button class="next-btn" type="button" aria-label="Scroll to more">&raquo;</button>
 
     <nav class="folders" aria-label="Sections">
-      <button class="folder" type="button" data-open-note>
+      <button class="folder" type="button" data-open-note="paid">
         <img src="assets/folder-cherries.png" alt="" width="120" height="100">
         <span class="folder-label">When I Got Paid</span>
       </button>
-      <button class="folder" type="button" data-open-note>
+      <button class="folder" type="button" data-open-note="fun">
         <img src="assets/folder-working-for-fun.png" alt="" width="120" height="100">
         <span class="folder-label">Working for Fun</span>
       </button>
-      <button class="folder" type="button" data-open-note>
+      <button class="folder" type="button" data-open-note="essays">
         <img src="assets/folder-lollipops.png" alt="" width="120" height="100">
         <span class="folder-label">Little Essays</span>
       </button>
-      <button class="folder" type="button" data-open-note>
+      <button class="folder" type="button" data-open-note="companies">
         <img src="assets/folder-companies-i-like.png" alt="" width="120" height="100">
         <span class="folder-label">Companies I Like</span>
       </button>
-      <button class="folder" type="button" data-open-note>
+      <button class="folder" type="button" data-open-note="resources">
         <img src="assets/folder-resources.png" alt="" width="120" height="100">
         <span class="folder-label">Resources</span>
       </button>
-      <button class="folder" type="button" data-open-note>
+      <button class="folder" type="button" data-open-note="food">
         <img src="assets/folder-i-love-food.png" alt="" width="120" height="100">
         <span class="folder-label">I Love Food</span>
       </button>
-      <button class="folder" type="button" data-open-note>
+      <button class="folder" type="button" data-open-note="reach">
         <img src="assets/folder-swimmers-reach-me.png" alt="" width="120" height="100">
         <span class="folder-label">Reach Me</span>
       </button>
     </nav>
 
     <div class="note-overlay" data-note-overlay>
-      <img src="assets/popup-note.png" alt="">
+      <div class="note-window">
+        <img src="assets/popup-note.png" alt="" class="note-frame">
+        <div class="note-body" data-note-body></div>
+      </div>
     </div>
   </main>
 
   <script>
+    const notes = {
+      companies: '<p class="note-plain">Work in progress</p>',
+      essays: '<p class="note-plain">Work in progress</p>',
+      resources: {
+        label: 'GTM knowledge organization',
+        items: [
+          ['Startup Guide To Toronto', 'More details coming soon.'],
+          ['Montreal Startup Guide', 'More details coming soon.'],
+          ['Vancouver Startup Guide', 'More details coming soon.'],
+          ['People I Look Up To In The List', 'More details coming soon.'],
+          ['Presentation Skills', 'More details coming soon.']
+        ]
+      },
+      fun: {
+        items: [
+          ['New York Startup Week', 'More details coming soon.'],
+          ['Project Atlas', 'More details coming soon.'],
+          ['Toronto Tech Week', 'More details coming soon.'],
+          ['Althra Scout', 'More details coming soon.'],
+          ['North Star', 'More details coming soon.'],
+          ["Kent's Bridge Islam School Volunteering", 'More details coming soon.'],
+          ['Montreal Startup Guide', 'More details coming soon.'],
+          ['McGill Ventures', 'More details coming soon.'],
+          ['Dorm Room Fund – Investor Track', 'More details coming soon.'],
+          ['Front Row Ventures – Portfolio Mgmt', 'More details coming soon.'],
+          ['Iffat Foundation', 'More details coming soon.']
+        ]
+      }
+    };
+
+    function buildList(data) {
+      const label = data.label ? `<p class="note-label">${data.label}</p>` : '';
+      const rows = data.items.map(([title, detail], i) => `
+        <div class="note-item">
+          <button class="note-item-toggle" type="button" data-note-toggle="${i}">
+            <span class="note-item-title">${title}</span>
+            <span class="note-item-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="note-item-panel" data-note-panel="${i}">
+            <div class="note-item-panel-inner">${detail}</div>
+          </div>
+        </div>`).join('');
+      return `${label}<div class="note-list">${rows}</div>`;
+    }
+
     const overlay = document.querySelector('[data-note-overlay]');
+    const body = document.querySelector('[data-note-body]');
+
     document.querySelectorAll('[data-open-note]').forEach((btn) => {
-      btn.addEventListener('click', () => overlay.classList.add('is-open'));
+      btn.addEventListener('click', () => {
+        const key = btn.dataset.openNote;
+        const data = notes[key];
+        if (!data) {
+          body.innerHTML = '';
+        } else if (typeof data === 'string') {
+          body.innerHTML = data;
+        } else {
+          body.innerHTML = buildList(data);
+          body.querySelectorAll('[data-note-toggle]').forEach((toggle) => {
+            toggle.addEventListener('click', () => {
+              const item = toggle.closest('.note-item');
+              item.classList.toggle('is-expanded');
+            });
+          });
+        }
+        overlay.classList.add('is-open');
+      });
     });
-    overlay.addEventListener('click', () => overlay.classList.remove('is-open'));
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) overlay.classList.remove('is-open');
+    });
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') overlay.classList.remove('is-open');
     });
