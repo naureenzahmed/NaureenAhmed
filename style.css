@@ -32,8 +32,8 @@ body {
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(1.5rem, 4vw, 3rem);
+  grid-template-columns: 0.8fr 1.35fr;
+  gap: clamp(1rem, 2.5vw, 2rem);
   align-items: start;
   padding: clamp(2.5rem, 7vw, 5.5rem) clamp(1.5rem, 6vw, 5rem) 0;
 }
@@ -49,14 +49,14 @@ body {
 }
 
 .bio {
-  max-width: 46rem;
+  max-width: 52rem;
   padding-top: clamp(0.5rem, 1.5vw, 1rem);
 }
 
 .bio p {
   margin: 0 0 1.35em;
   font-weight: 600;
-  font-size: clamp(1rem, 1.5vw, 1.28rem);
+  font-size: clamp(0.82rem, 1.15vw, 1.02rem);
   line-height: 1.55;
   color: var(--ink);
 }
