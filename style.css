@@ -337,6 +337,40 @@ body {
   padding-top: 0.35rem;
 }
 
+.note-item-panel-inner p {
+  margin: 0 0 0.75em;
+}
+
+.note-item-panel-inner p:last-child,
+.note-item-panel-inner ul:last-child {
+  margin-bottom: 0;
+}
+
+.note-item-panel-inner ul {
+  margin: 0 0 0.75em;
+  padding-left: 1.15em;
+}
+
+.note-item-panel-inner li {
+  margin-bottom: 0.4em;
+}
+
+.note-item-panel-inner li:last-child {
+  margin-bottom: 0;
+}
+
+.note-item-panel-inner a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* "As President," style role headings inside a long entry */
+.note-role {
+  font-weight: 700;
+  margin: 0 0 0.35em;
+}
+
 @media (max-width: 860px) {
   .hero-content {
     grid-template-columns: 1fr;
