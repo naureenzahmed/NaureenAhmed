@@ -1,4 +1,6 @@
 :root {
+  --font-display: 'Pixelify Sans', system-ui, sans-serif;
+  --font-text: 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --ink: #33502c;
   --ink-shadow: #eee6cc;
   --cream: #faf6ea;
@@ -13,8 +15,10 @@ html, body {
 }
 
 body {
-  font-family: 'Pixelify Sans', system-ui, sans-serif;
+  font-family: var(--font-text);
   color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
 }
 
 .hero {
@@ -40,6 +44,7 @@ body {
 
 .name {
   margin: 0;
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(2.75rem, 7.2vw, 5.75rem);
   line-height: 0.94;
@@ -49,15 +54,15 @@ body {
 }
 
 .bio {
-  max-width: 52rem;
+  max-width: 60ch;
   padding-top: clamp(0.5rem, 1.5vw, 1rem);
 }
 
 .bio p {
   margin: 0 0 1.35em;
-  font-weight: 600;
-  font-size: clamp(0.82rem, 1.15vw, 1.02rem);
-  line-height: 1.55;
+  font-weight: 400;
+  font-size: clamp(1rem, 1.1vw, 1.125rem);
+  line-height: 1.65;
   color: var(--ink);
 }
 
@@ -74,7 +79,7 @@ body {
   border-radius: 0.9rem 0 0 0.9rem;
   background: #1b1c14;
   color: #d7e05a;
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: var(--font-display);
   font-size: 1.35rem;
   cursor: pointer;
   display: flex;
@@ -127,6 +132,7 @@ body {
 }
 
 .folder-label {
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(0.78rem, 1.05vw, 0.95rem);
   line-height: 1.2;
@@ -254,7 +260,7 @@ body {
   flex: 1 1 auto;
   overflow-y: auto;
   padding: clamp(0.9rem, 2vw, 1.6rem) clamp(1.1rem, 3vw, 2rem);
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: var(--font-text);
   color: var(--ink);
 }
 
@@ -265,6 +271,7 @@ body {
 
 .note-plain {
   margin: 0;
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(1.1rem, 2.4vw, 1.5rem);
 }
@@ -302,6 +309,7 @@ body {
 }
 
 .note-item-title {
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(0.95rem, 1.9vw, 1.15rem);
   text-decoration: underline;
@@ -331,14 +339,15 @@ body {
 
 .note-item-panel-inner {
   overflow: hidden;
-  font-weight: 500;
-  font-size: clamp(0.85rem, 1.6vw, 1rem);
-  line-height: 1.5;
+  font-weight: 400;
+  font-size: clamp(1rem, 1.35vw, 1.0625rem);
+  line-height: 1.65;
   padding-top: 0.35rem;
 }
 
 .note-item-panel-inner p {
-  margin: 0 0 0.75em;
+  margin: 0 0 0.85em;
+  max-width: 68ch;
 }
 
 .note-item-panel-inner p:last-child,
@@ -412,8 +421,8 @@ body {
 }
 
 .note-contact-note {
-  font-weight: 500;
-  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  font-weight: 400;
+  font-size: clamp(0.875rem, 1.4vw, 0.95rem);
   color: #6b7a63;
 }
 
