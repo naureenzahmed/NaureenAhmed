@@ -1,4 +1,5 @@
 :root {
+  --sky: #c7dfed;
   --font-display: 'Pixelify Sans', system-ui, sans-serif;
   --font-text: 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --ink: #33502c;
@@ -435,8 +436,36 @@ body {
 }
 
 @media (max-width: 860px) {
+  /* The art is portrait, so cover leaves only a sliver of sky once the hero
+     narrows and the wordmark and bio spill onto the hills. Instead the hero
+     becomes flat sky and the photo is banded behind the folders, starting
+     wherever the text happens to end and fading in at its top edge. */
+  .hero {
+    background-image: none;
+    background-color: var(--sky);
+  }
   .hero-content {
     grid-template-columns: 1fr;
+    padding-bottom: clamp(1.5rem, 6vw, 3rem);
+  }
+  .folders {
+    position: relative;
+  }
+  .folders::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    top: -3rem;
+    bottom: calc(-1 * clamp(2rem, 6vh, 3.5rem));
+    background: url('assets/bg-hero.jpg') center bottom / cover;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%);
+    mask-image: linear-gradient(to bottom, transparent, #000 18%);
+  }
+  .folder {
+    position: relative;
+    z-index: 1;
   }
   .folders {
     grid-template-columns: repeat(3, minmax(4.5rem, 6rem));
