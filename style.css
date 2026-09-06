@@ -1,5 +1,6 @@
 :root {
   --sky: #c7dfed;
+  --sky-fade: rgba(199, 223, 237, 0);
   --font-display: 'Pixelify Sans', system-ui, sans-serif;
   --font-text: 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --ink: #33502c;
@@ -436,36 +437,25 @@ body {
 }
 
 @media (max-width: 860px) {
-  /* The art is portrait, so cover leaves only a sliver of sky once the hero
-     narrows and the wordmark and bio spill onto the hills. Instead the hero
-     becomes flat sky and the photo is banded behind the folders, starting
-     wherever the text happens to end and fading in at its top edge. */
+  /* The art is portrait, so cover crops it to a sliver of sky once the hero
+     narrows. Show the whole photo instead, full width along the bottom, and
+     let its own sky colour carry on above it - the sky simply continues, and
+     the hero grows tall enough (the photo is 1.25x its width) that the
+     wordmark and bio always land on sky. */
   .hero {
-    background-image: none;
     background-color: var(--sky);
+    background-image:
+      linear-gradient(to bottom,
+        var(--sky) calc(100% - 125vw),
+        var(--sky-fade) calc(100% - 125vw + 3rem)),
+      url('assets/bg-hero.jpg');
+    background-size: auto, 100% auto;
+    background-position: center top, center bottom;
+    min-height: max(100vh, calc(63vw + 44rem));
   }
   .hero-content {
     grid-template-columns: 1fr;
     padding-bottom: clamp(1.5rem, 6vw, 3rem);
-  }
-  .folders {
-    position: relative;
-  }
-  .folders::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    width: 100vw;
-    transform: translateX(-50%);
-    top: -3rem;
-    bottom: calc(-1 * clamp(2rem, 6vh, 3.5rem));
-    background: url('assets/bg-hero.jpg') center bottom / cover;
-    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%);
-    mask-image: linear-gradient(to bottom, transparent, #000 18%);
-  }
-  .folder {
-    position: relative;
-    z-index: 1;
   }
   .folders {
     grid-template-columns: repeat(3, minmax(4.5rem, 6rem));
