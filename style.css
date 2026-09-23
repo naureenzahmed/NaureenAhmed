@@ -302,6 +302,10 @@ body {
   margin-bottom: 0;
 }
 
+.note-intro-links {
+  color: #9aa394;
+}
+
 .note-list {
   display: flex;
   flex-direction: column;
