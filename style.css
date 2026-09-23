@@ -306,6 +306,16 @@ body {
   color: #9aa394;
 }
 
+.note-intro-links a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.note-intro-links a:hover {
+  color: var(--ink);
+}
+
 .note-list {
   display: flex;
   flex-direction: column;
@@ -387,6 +397,25 @@ body {
 
 .note-item-panel-inner li:last-child {
   margin-bottom: 0;
+}
+
+.note-figure {
+  margin: 0 0 0.85em;
+  max-width: 24rem;
+}
+
+.note-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #e3e5e0;
+  border-radius: 0.4rem;
+}
+
+.note-figure figcaption {
+  margin-top: 0.35rem;
+  font-size: 0.8em;
+  color: #9aa394;
 }
 
 .note-item-panel-inner a {
