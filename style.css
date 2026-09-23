@@ -358,6 +358,22 @@ body {
   transform: rotate(45deg);
 }
 
+.note-item-meta {
+  margin: 0.15rem 0 0;
+  font-size: 0.8em;
+  color: #9aa394;
+}
+
+.note-item-meta a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.note-item-meta a:hover {
+  color: var(--ink);
+}
+
 .note-item-panel {
   display: grid;
   grid-template-rows: 0fr;
