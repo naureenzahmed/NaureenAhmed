@@ -434,6 +434,16 @@ body {
   color: #9aa394;
 }
 
+.note-figure figcaption a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.note-figure figcaption a:hover {
+  color: var(--ink);
+}
+
 .note-item-panel-inner a {
   color: var(--ink);
   text-decoration: underline;
