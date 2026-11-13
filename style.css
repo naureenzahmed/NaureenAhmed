@@ -325,6 +325,11 @@ body {
   margin-top: 0.5rem;
 }
 
+/* Essays are long reads, so give each one a blank row of its own */
+.note-list-essays .note-item + .note-item {
+  margin-top: 2rem;
+}
+
 .note-item-toggle {
   display: flex;
   align-items: baseline;
